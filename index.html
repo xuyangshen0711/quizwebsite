@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>测测你是哪种狗系人格 🐶</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Start Page -->
+        <section id="start-page" class="page active">
+            <div class="header-image">🐶</div>
+            <h1>测测你是哪种狗系人格</h1>
+            <p class="subtitle">根据你的性格与生活偏好，看看你最像哪种狗狗类型（仅供娱乐）</p>
+            
+            <div class="tags">
+                <span class="tag">15道题</span>
+                <span class="tag">1分钟测完</span>
+                <span class="tag">适合截图分享</span>
+            </div>
+            
+            <div class="input-group">
+                <input type="text" id="user-name" placeholder="输入你的名字（选填）" maxlength="10">
+            </div>
+            
+            <button id="start-btn" class="primary-btn">开始测试</button>
+            <p class="disclaimer">本测试仅供娱乐，不构成任何专业判断。</p>
+        </section>
+
+        <!-- Quiz Page -->
+        <section id="quiz-page" class="page">
+            <div class="progress-container">
+                <div class="progress-text">第 <span id="current-q-num">1</span> 题 / 共 15 题</div>
+                <div class="progress-bar-bg">
+                    <div class="progress-bar-fill" id="progress-bar"></div>
+                </div>
+            </div>
+            
+            <div class="question-container">
+                <h2 id="question-text">问题加载中...</h2>
+                <div id="options-container" class="options-list">
+                    <!-- Options injected by JS -->
+                </div>
+            </div>
+            
+            <div class="quiz-navigation">
+                <button id="prev-btn" class="nav-btn secondary-btn" style="display: none;">返回</button>
+                <button id="next-btn" class="nav-btn primary-btn" disabled>确认</button>
+            </div>
+        </section>
+
+        <!-- Result Page -->
+        <section id="result-page" class="page">
+            <div id="result-content">
+                <!-- Result injected by JS -->
+            </div>
+            <div class="action-buttons">
+                <button id="copy-btn" class="secondary-btn">复制结果文案</button>
+                <button id="restart-btn" class="primary-btn">重新测试</button>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
